@@ -1,5 +1,9 @@
 # Roosterbit Odoo Addons
 
+[![ci](https://github.com/roosterbit-hr/roosterbit-odoo-addons/actions/workflows/ci.yml/badge.svg?branch=18.0)](https://github.com/roosterbit-hr/roosterbit-odoo-addons/actions/workflows/ci.yml)
+[![License: LGPL-3](https://img.shields.io/badge/license-LGPL--3-blue.svg)](LICENSE)
+[![Odoo 18.0](https://img.shields.io/badge/odoo-18.0-875A7B.svg)](https://www.odoo.com)
+
 Odoo 18 modules by Roosterbit that extend standard Odoo features. Each module
 depends only on standard Odoo (Community or Enterprise) and can be installed on its
 own.
@@ -20,7 +24,7 @@ complete Croatian translation.
 1. Clone the branch that matches your Odoo version:
 
    ```bash
-   git clone -b 18.0 <repository-url> roosterbit-odoo-addons
+   git clone -b 18.0 https://github.com/roosterbit-hr/roosterbit-odoo-addons.git
    ```
 
 2. Add the folder to `addons_path` in the Odoo configuration.
@@ -56,8 +60,17 @@ that test.
 
 ## License
 
-LGPL-3. See [`LICENSE`](LICENSE) and [`licenses/`](licenses/).
+LGPL-3. See [`LICENSE`](LICENSE); the LGPL-3 builds on the GPL-3 in [`COPYING`](COPYING).
 
-## Contact
+## Work with us
 
-Roosterbit, https://www.roosterbit.com.hr
+Roosterbit builds and maintains Odoo modules, integrations and Croatian
+localization, for companies and for Odoo partners (including white-label work).
+
+- Custom modules, migrations to Odoo 18 and reviews of existing code
+- Croatian localization: e-invoicing (Fiskalizacija 2.0), POS fiscalization,
+  retail and wholesale pricing, statements and reminders
+- Tests, documentation and long-term support
+
+Contact: [rost@roosterbit.com.hr](mailto:rost@roosterbit.com.hr) ·
+[www.roosterbit.com.hr](https://www.roosterbit.com.hr)
