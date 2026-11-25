@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="view_account_ios_list" model="ir.ui.view">
+        <field name="name">account.ios.list</field>
+        <field name="model">account.ios</field>
+        <field name="arch" type="xml">
+            <list>
+                <header>
+                    <button
+                        name="%(action_account_ios_prepare)d"
+                        type="action"
+                        string="Prepare Statements"
+                        display="always"
+                        class="btn-primary"
+                    />
+                </header>
+                <field name="name" />
+                <field name="date" />
+                <field name="partner_id" />
+                <field name="amount_receivable" sum="Receivables" />
+                <field name="amount_payable" sum="Payables" />
+                <field name="balance" sum="Balance" />
+                <field
+                    name="state"
+                    widget="badge"
+                    decoration-info="state == 'draft'"
+                    decoration-warning="state == 'sent'"
+                    decoration-success="state == 'confirmed'"
+                    decoration-danger="state == 'disputed'"
+                />
+                <field name="currency_id" column_invisible="1" />
+                <field
+                    name="company_id"
+                    groups="base.group_multi_company"
+                    optional="hide"
+                />
+            </list>
+        </field>
+    </record>
+
+    <record id="view_account_ios_form" model="ir.ui.view">
+        <field name="name">account.ios.form</field>
+        <field name="model">account.ios</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button
+                        name="action_refresh"
+                        type="object"
+                        string="Refresh Lines"
+                        invisible="state != 'draft'"
+                    />
+                    <button
+                        name="action_mark_sent"
+                        type="object"
+                        string="Mark as Sent"
+                        class="btn-primary"
+                        invisible="state != 'draft'"
+                    />
+                    <button
+                        name="action_agree"
+                        type="object"
+                        string="Partner Agrees"
+                        class="btn-primary"
+                        invisible="state != 'sent'"
+                    />
+                    <button
+                        name="action_disagree"
+                        type="object"
+                        string="Partner Disagrees"
+                        invisible="state != 'sent'"
+                    />
+                    <button
+                        name="action_draft"
+                        type="object"
+                        string="Reset to Draft"
+                        invisible="state == 'draft'"
+                    />
+                    <field
+                        name="state"
+                        widget="statusbar"
+                        statusbar_visible="draft,sent,confirmed"
+                    />
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name" readonly="1" />
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="partner_id" readonly="state != 'draft'" />
+                            <field name="date" readonly="state != 'draft'" />
+                            <field name="reply_days" readonly="state != 'draft'" />
+                            <field
+                                name="company_id"
+                                groups="base.group_multi_company"
+                                readonly="state != 'draft'"
+                            />
+                            <field name="currency_id" invisible="1" />
+                        </group>
+                        <group string="Partner Reply">
+                            <field name="reply_date" />
+                            <field
+                                name="reply_note"
+                                placeholder="Difference stated by the partner"
+                            />
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Lines" name="lines">
+                            <field name="line_ids" readonly="1">
+                                <list>
+                                    <field name="side" />
+                                    <field name="move_name" />
+                                    <field name="invoice_date" />
+                                    <field name="date_maturity" />
+                                    <field name="ref" optional="hide" />
+                                    <field name="amount_original" />
+                                    <field name="amount_open" />
+                                    <field name="currency_id" column_invisible="1" />
+                                </list>
+                            </field>
+                        </page>
+                    </notebook>
+                    <group class="oe_subtotal_footer" colspan="2">
+                        <field name="amount_receivable" />
+                        <field name="amount_payable" />
+                        <field name="balance" class="oe_subtotal_footer_separator" />
+                    </group>
+                </sheet>
+                <chatter />
+            </form>
+        </field>
+    </record>
+
+    <record id="view_account_ios_search" model="ir.ui.view">
+        <field name="name">account.ios.search</field>
+        <field name="model">account.ios</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name" />
+                <field name="partner_id" />
+                <filter name="draft" string="Draft" domain="[('state', '=', 'draft')]" />
+                <filter name="sent" string="Sent" domain="[('state', '=', 'sent')]" />
+                <filter
+                    name="confirmed"
+                    string="Confirmed"
+                    domain="[('state', '=', 'confirmed')]"
+                />
+                <filter
+                    name="disputed"
+                    string="Disputed"
+                    domain="[('state', '=', 'disputed')]"
+                />
+                <group expand="0" string="Group By">
+                    <filter
+                        name="group_partner"
+                        string="Partner"
+                        context="{'group_by': 'partner_id'}"
+                    />
+                    <filter
+                        name="group_state"
+                        string="Status"
+                        context="{'group_by': 'state'}"
+                    />
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_account_ios" model="ir.actions.act_window">
+        <field name="name">Statements of Open Items</field>
+        <field name="res_model">account.ios</field>
+        <field name="view_mode">list,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Prepare a statement of open items
+            </p>
+            <p>
+                Use Prepare Statements to create one draft per partner with open
+                receivables or payables on a date, for example 31 December.
+            </p>
+        </field>
+    </record>
+</odoo>

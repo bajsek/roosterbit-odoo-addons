@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-name="pos_table_reservation.FloorScreen" t-inherit="pos_restaurant.FloorScreen" t-inherit-mode="extension">
+        <xpath expr="//div[hasclass('label')]" position="after">
+            <div t-if="tableReservation(table)" class="position-absolute bottom-0 start-0 w-100 text-center smaller text-truncate px-1">
+                <t t-esc="tableReservation(table).guest_name"/>
+            </div>
+        </xpath>
+    </t>
+</templates>

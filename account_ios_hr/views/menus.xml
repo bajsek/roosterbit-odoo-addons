@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <menuitem
+        id="menu_account_ios"
+        name="Statements of Open Items"
+        parent="account.menu_finance"
+        action="action_account_ios"
+        sequence="25"
+        groups="account.group_account_invoice"
+    />
+</odoo>

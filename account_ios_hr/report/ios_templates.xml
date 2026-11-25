@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="report_account_ios_document">
+        <t t-set="doc" t-value="doc.with_context(lang=doc.partner_id.lang)"/>
+        <t t-set="company_partner" t-value="doc.company_id.partner_id"/>
+        <t t-set="place" t-value="company_partner.city or company_partner.state_id.name or ''"/>
+        <div class="page ios-letter">
+            <style>
+                .ios-letter { color: #1c1f24; font-size: 11pt; line-height: 1.4; }
+                .ios-head { width: 100%; }
+                .ios-head td { vertical-align: top; }
+                .ios-from { width: 52%; }
+                .ios-from .o_address_format, .ios-to .o_address_format { font-size: 11pt; }
+                .ios-meta { width: 48%; text-align: right; }
+                .ios-kicker { font-size: 8.5pt; letter-spacing: 0.16em; text-transform: uppercase; color: #5c6168; }
+                .ios-title { margin: 2px 0 0; font-size: 16pt; font-weight: 700; letter-spacing: 0.04em; }
+                .ios-date { margin-top: 8px; font-size: 10.5pt; }
+                .ios-rule { border: 0; border-top: 1.5px solid #1c1f24; margin: 12px 0 18px; }
+                .ios-to { width: 46%; margin-left: 54%; margin-bottom: 22px; }
+                .ios-lead { margin: 0 0 8px; }
+                .ios-section { margin: 16px 0 4px; font-size: 10pt; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; }
+                .ios-konto { margin: 0 0 4px; font-size: 9.5pt; color: #3a4046; }
+                table.ios-grid { width: 100%; border-collapse: collapse; margin: 0 0 4px; }
+                table.ios-grid th { text-align: left; font-size: 8pt; letter-spacing: 0.05em; text-transform: uppercase; color: #5c6168; font-weight: 700; border-bottom: 1px solid #1c1f24; padding: 5px 4px; }
+                table.ios-grid td { padding: 5px 4px; border-bottom: 1px solid #e4dfd8; vertical-align: top; }
+                table.ios-grid th.num, table.ios-grid td.num { text-align: right; white-space: nowrap; }
+                table.ios-grid tr.ios-total td { border-bottom: 0; border-top: 1.5px solid #1c1f24; font-weight: 700; padding-top: 7px; }
+                .ios-saldo { margin-top: 14px; }
+                .ios-close { margin-top: 16px; }
+                table.ios-sign { width: 100%; margin-top: 28px; }
+                table.ios-sign td { width: 50%; vertical-align: top; padding-right: 28px; }
+                .ios-sign-label { font-size: 9pt; letter-spacing: 0.08em; text-transform: uppercase; color: #5c6168; }
+                .ios-line { border-bottom: 1px solid #1c1f24; height: 32px; }
+                .ios-logo { max-height: 18mm; max-width: 68mm; }
+                .ios-obveze { page-break-before: always; }
+                .ios-tail { page-break-inside: avoid; }
+            </style>
+
+            <div class="header">
+                <img t-if="doc.company_id.logo" t-att-src="image_data_uri(doc.company_id.logo)" alt="" style="max-height: 18mm; max-width: 68mm;"/>
+            </div>
+
+            <table class="ios-head">
+                <tr>
+                    <td class="ios-from">
+                        <div t-field="doc.company_id.partner_id" t-options="{'widget': 'contact', 'fields': ['name', 'address'], 'no_marker': True}"/>
+                        <div t-foreach="doc.tax_id_lines(doc.company_id.partner_id)" t-as="tax_id"><t t-out="tax_id[0]"/>: <t t-out="tax_id[1]"/></div>
+                        <div t-if="doc.company_iban()">IBAN: <t t-out="doc.company_iban()"/></div>
+                    </td>
+                    <td class="ios-meta">
+                        <div class="ios-kicker">Form</div>
+                        <div class="ios-title">Statement of Open Items</div>
+                        <div class="ios-kicker">IOS</div>
+                        <div class="ios-date">
+                            No. <span t-field="doc.name"/>
+                        </div>
+                        <div class="ios-date">
+                            <t t-if="place"><t t-out="place"/>, </t><span t-field="doc.date"/>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            <hr class="ios-rule"/>
+
+            <div class="ios-to">
+                <div t-field="doc.partner_id" t-options="{'widget': 'contact', 'fields': ['name', 'address'], 'no_marker': True}"/>
+                <div t-foreach="doc.tax_id_lines(doc.partner_id)" t-as="tax_id"><t t-out="tax_id[0]"/>: <t t-out="tax_id[1]"/></div>
+            </div>
+
+            <p class="ios-lead">
+                Please find below the open items as of <span t-field="doc.date"/>,
+                showing your balance in our books.
+            </p>
+            <p class="ios-saldo"><strong><t t-out="doc.saldo_sentence()"/></strong></p>
+
+            <t t-set="receivable" t-value="doc.line_ids.filtered(lambda line: line.side == 'receivable')"/>
+            <t t-set="payable" t-value="doc.line_ids.filtered(lambda line: line.side == 'payable')"/>
+
+            <t t-call="account_ios_hr.report_account_ios_table">
+                <t t-set="ios_lines" t-value="receivable"/>
+                <t t-set="ios_heading">Our receivables</t>
+                <t t-set="ios_total" t-value="doc.amount_receivable"/>
+            </t>
+            <div t-if="payable" class="ios-obveze">
+                <t t-call="account_ios_hr.report_account_ios_table">
+                    <t t-set="ios_lines" t-value="payable"/>
+                    <t t-set="ios_heading">Our payables</t>
+                    <t t-set="ios_total" t-value="doc.amount_payable"/>
+                </t>
+                <table t-if="receivable" class="ios-grid" style="width: 52%; margin-left: auto; margin-top: 8px;">
+                    <tr class="ios-total">
+                        <td>Balance</td>
+                        <td class="num"><span t-field="doc.balance"/></td>
+                    </tr>
+                </table>
+                <t t-call="account_ios_hr.report_account_ios_tail"/>
+            </div>
+            <t t-if="not payable">
+                <p t-if="not receivable">There are no open items on this date.</p>
+                <t t-call="account_ios_hr.report_account_ios_tail"/>
+            </t>
+        </div>
+    </template>
+
+    <template id="report_account_ios_table">
+        <t t-if="ios_lines">
+            <div class="ios-section"><t t-out="ios_heading"/></div>
+            <t t-set="accounts" t-value="ios_lines.mapped('move_line_id.account_id')"/>
+            <p class="ios-konto" t-if="len(accounts) == 1">
+                Account: <t t-out="accounts.code"/> — <t t-out="accounts.name"/>
+            </p>
+            <table class="ios-grid">
+                <thead>
+                    <tr>
+                        <th style="width: 8%;">No.</th>
+                        <th>Document</th>
+                        <th>Document date</th>
+                        <th>Due date</th>
+                        <th class="num">Open amount</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr t-foreach="ios_lines" t-as="line">
+                        <td><t t-out="line_index + 1"/>.</td>
+                        <td><span t-field="line.move_name"/></td>
+                        <td><span t-field="line.invoice_date"/></td>
+                        <td><span t-field="line.date_maturity"/></td>
+                        <td class="num"><span t-field="line.amount_open"/></td>
+                    </tr>
+                    <tr class="ios-total">
+                        <td colspan="4" class="num">Total</td>
+                        <td class="num"><span t-out="ios_total" t-options="{'widget': 'monetary', 'display_currency': doc.currency_id}"/></td>
+                    </tr>
+                </tbody>
+            </table>
+        </t>
+    </template>
+
+    <template id="report_account_ios_tail">
+        <div class="ios-tail">
+            <p class="ios-close">
+                <t t-out="doc.reply_sentence()"/>
+                If we receive no reply, we will consider the balance agreed.
+                If you disagree, state the difference and sign.
+            </p>
+            <table class="ios-sign">
+                <tr>
+                    <td>
+                        <div class="ios-sign-label">Sender</div>
+                        <div class="ios-line"/>
+                    </td>
+                    <td>
+                        <div class="ios-sign-label">We confirm the balance</div>
+                        <div class="ios-line"/>
+                        <div class="ios-sign-label" style="margin-top: 14px;">Place and date</div>
+                        <div class="ios-line"/>
+                        <div class="ios-sign-label" style="margin-top: 14px;">Difference, if any</div>
+                        <div class="ios-line"/>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </template>
+
+    <template id="report_account_ios">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <t t-call="account_ios_hr.report_account_ios_document" t-lang="doc.partner_id.lang"/>
+            </t>
+        </t>
+    </template>
+</odoo>

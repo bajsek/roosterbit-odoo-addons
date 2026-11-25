@@ -1,0 +1,8 @@
+Copyright Roosterbit.
+
+The modules in this repository are licensed under the GNU Lesser General Public
+License, version 3 (LGPL-3), as stated in each module's __manifest__.py.
+
+Full texts:
+- licenses/LGPL-3.txt
+- licenses/GPL-3.txt (the LGPL-3 builds on the GPL-3)

@@ -1,0 +1,195 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* portal_timesheet
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0-20260908\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-18 10:15+0000\n"
+"PO-Revision-Date: 2026-11-18 10:15+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: portal_timesheet
+#: model_terms:ir.ui.view,arch_db:portal_timesheet.portal_timesheet_entries
+msgid "<i class=\"fa fa-pencil\"/> Edit"
+msgstr ""
+
+#. module: portal_timesheet
+#: model_terms:ir.ui.view,arch_db:portal_timesheet.portal_timesheet_entries
+msgid "<i class=\"fa fa-plus\"/> Log Time"
+msgstr ""
+
+#. module: portal_timesheet
+#: model_terms:ir.ui.view,arch_db:portal_timesheet.portal_timesheet_entries
+msgid "<i class=\"fa fa-trash\"/> Delete"
+msgstr ""
+
+#. module: portal_timesheet
+#: model_terms:ir.ui.view,arch_db:portal_timesheet.portal_timesheet_entry_form
+msgid "<option value=\"\">Select a task</option>"
+msgstr ""
+
+#. module: portal_timesheet
+#: model:ir.model.fields,help:portal_timesheet.field_res_users__portal_timesheet_enabled
+msgid ""
+"Allow this portal user to log time on tasks they follow or are assigned to."
+msgstr ""
+
+#. module: portal_timesheet
+#: model:ir.model,name:portal_timesheet.model_account_analytic_line
+msgid "Analytic Line"
+msgstr ""
+
+#. module: portal_timesheet
+#: model_terms:ir.ui.view,arch_db:portal_timesheet.portal_timesheet_entry_form
+msgid "Cancel"
+msgstr ""
+
+#. module: portal_timesheet
+#: model_terms:ir.ui.view,arch_db:portal_timesheet.portal_timesheet_entries
+#: model_terms:ir.ui.view,arch_db:portal_timesheet.portal_timesheet_entry_form
+msgid "Date"
+msgstr ""
+
+#. module: portal_timesheet
+#: model_terms:ir.ui.view,arch_db:portal_timesheet.portal_timesheet_entries
+msgid "Delete this entry?"
+msgstr ""
+
+#. module: portal_timesheet
+#: model_terms:ir.ui.view,arch_db:portal_timesheet.portal_timesheet_entries
+#: model_terms:ir.ui.view,arch_db:portal_timesheet.portal_timesheet_entry_form
+msgid "Description"
+msgstr ""
+
+#. module: portal_timesheet
+#: model_terms:ir.ui.view,arch_db:portal_timesheet.portal_timesheet_breadcrumbs
+msgid "Edit"
+msgstr ""
+
+#. module: portal_timesheet
+#: model_terms:ir.ui.view,arch_db:portal_timesheet.portal_timesheet_entry_form
+msgid "Edit Time Entry"
+msgstr ""
+
+#. module: portal_timesheet
+#: model_terms:ir.ui.view,arch_db:portal_timesheet.portal_timesheet_entry_form
+msgid "For example 1.5 for one hour and a half."
+msgstr ""
+
+#. module: portal_timesheet
+#: model_terms:ir.ui.view,arch_db:portal_timesheet.portal_timesheet_entries
+#: model_terms:ir.ui.view,arch_db:portal_timesheet.portal_timesheet_entry_form
+msgid "Hours"
+msgstr ""
+
+#. module: portal_timesheet
+#. odoo-python
+#: code:addons/portal_timesheet/controllers/portal_timesheet.py:0
+msgid "Hours must be more than 0 and at most %s."
+msgstr ""
+
+#. module: portal_timesheet
+#: model_terms:ir.ui.view,arch_db:portal_timesheet.portal_timesheet_entries
+msgid "Invoiced"
+msgstr ""
+
+#. module: portal_timesheet
+#: model_terms:ir.ui.view,arch_db:portal_timesheet.portal_timesheet_entry_form
+msgid "Log Time"
+msgstr ""
+
+#. module: portal_timesheet
+#: model_terms:ir.ui.view,arch_db:portal_timesheet.portal_timesheet_menu
+msgid "Log your hours on the tasks you work on"
+msgstr ""
+
+#. module: portal_timesheet
+#: model_terms:ir.ui.view,arch_db:portal_timesheet.portal_timesheet_breadcrumbs
+msgid "New"
+msgstr ""
+
+#. module: portal_timesheet
+#. odoo-python
+#: code:addons/portal_timesheet/controllers/portal_timesheet.py:0
+msgid "Please check the task, the date and the hours."
+msgstr ""
+
+#. module: portal_timesheet
+#: model:ir.model.fields,field_description:portal_timesheet.field_res_users__portal_timesheet_enabled
+msgid "Portal Time Entry"
+msgstr ""
+
+#. module: portal_timesheet
+#: model_terms:ir.ui.view,arch_db:portal_timesheet.portal_timesheet_entries
+msgid "Project"
+msgstr ""
+
+#. module: portal_timesheet
+#: model_terms:ir.ui.view,arch_db:portal_timesheet.portal_timesheet_entry_form
+msgid "Save"
+msgstr ""
+
+#. module: portal_timesheet
+#: model:ir.model,name:portal_timesheet.model_project_task
+#: model_terms:ir.ui.view,arch_db:portal_timesheet.portal_timesheet_entries
+#: model_terms:ir.ui.view,arch_db:portal_timesheet.portal_timesheet_entry_form
+msgid "Task"
+msgstr ""
+
+#. module: portal_timesheet
+#. odoo-python
+#: code:addons/portal_timesheet/controllers/portal_timesheet.py:0
+msgid "The date is required."
+msgstr ""
+
+#. module: portal_timesheet
+#: model_terms:ir.ui.view,arch_db:portal_timesheet.portal_timesheet_entries
+msgid "The entry has been deleted."
+msgstr ""
+
+#. module: portal_timesheet
+#: model_terms:ir.ui.view,arch_db:portal_timesheet.portal_timesheet_entries
+msgid "The entry has been saved."
+msgstr ""
+
+#. module: portal_timesheet
+#: model_terms:ir.ui.view,arch_db:portal_timesheet.portal_timesheet_entry_form
+msgid ""
+"There are no tasks on which you can log time. Ask your contact to add\n"
+"                you as a follower of a task."
+msgstr ""
+
+#. module: portal_timesheet
+#: model_terms:ir.ui.view,arch_db:portal_timesheet.portal_timesheet_entries
+msgid "This entry is invoiced and cannot be deleted."
+msgstr ""
+
+#. module: portal_timesheet
+#: model_terms:ir.ui.view,arch_db:portal_timesheet.portal_timesheet_breadcrumbs
+#: model_terms:ir.ui.view,arch_db:portal_timesheet.portal_timesheet_entries
+#: model_terms:ir.ui.view,arch_db:portal_timesheet.portal_timesheet_menu
+msgid "Time Entry"
+msgstr ""
+
+#. module: portal_timesheet
+#: model:ir.model,name:portal_timesheet.model_res_users
+msgid "User"
+msgstr ""
+
+#. module: portal_timesheet
+#. odoo-python
+#: code:addons/portal_timesheet/controllers/portal_timesheet.py:0
+msgid "You cannot log time on this task."
+msgstr ""
+
+#. module: portal_timesheet
+#: model_terms:ir.ui.view,arch_db:portal_timesheet.portal_timesheet_entries
+msgid "You have not logged any time yet."
+msgstr ""

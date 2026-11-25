@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="view_partner_form_ios" model="ir.ui.view">
+        <field name="name">res.partner.form.ios</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form" />
+        <field name="arch" type="xml">
+            <div name="button_box" position="inside">
+                <button
+                    name="action_open_ios"
+                    type="object"
+                    class="oe_stat_button"
+                    icon="fa-balance-scale"
+                    groups="account.group_account_invoice"
+                >
+                    <field name="ios_count" widget="statinfo" string="IOS" />
+                </button>
+            </div>
+        </field>
+    </record>
+</odoo>

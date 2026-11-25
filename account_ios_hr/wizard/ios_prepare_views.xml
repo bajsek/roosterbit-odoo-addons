@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="view_account_ios_prepare" model="ir.ui.view">
+        <field name="name">account.ios.prepare.form</field>
+        <field name="model">account.ios.prepare</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <field name="date" />
+                    <field name="company_id" groups="base.group_multi_company" />
+                    <field name="partner_ids" widget="many2many_tags" />
+                </group>
+                <p class="text-muted">
+                    For the year end, enter 31 December. An empty partner list means
+                    every partner with an open item on that date. An existing draft for
+                    the same partner and date is refreshed, not duplicated.
+                </p>
+                <footer>
+                    <button
+                        name="action_prepare"
+                        type="object"
+                        string="Prepare"
+                        class="btn-primary"
+                    />
+                    <button string="Cancel" special="cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_account_ios_prepare" model="ir.actions.act_window">
+        <field name="name">Prepare Statements</field>
+        <field name="res_model">account.ios.prepare</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+</odoo>

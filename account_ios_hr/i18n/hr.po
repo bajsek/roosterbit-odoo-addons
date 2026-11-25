@@ -1,0 +1,744 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* account_ios_hr
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0-20260908\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-18 17:38+0000\n"
+"PO-Revision-Date: 2026-11-18 17:38+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#. module: account_ios_hr
+#: model:ir.actions.report,print_report_name:account_ios_hr.action_report_account_ios
+msgid "'IOS_%s_%s' % (object.partner_id.name, object.date)"
+msgstr "'IOS_%s_%s' % (object.partner_id.name, object.date)"
+
+#. module: account_ios_hr
+#: model_terms:ir.ui.view,arch_db:account_ios_hr.report_account_ios_document
+msgid ""
+",\n"
+"                showing your balance in our books."
+msgstr ", koje označavaju Vaše stanje u našim poslovnim knjigama."
+
+#. module: account_ios_hr
+#. odoo-python
+#: code:addons/account_ios_hr/models/account_ios.py:0
+msgid "According to our books, on that date we owe you %s."
+msgstr "Prema našim knjigama na taj dan mi dugujemo Vama %s."
+
+#. module: account_ios_hr
+#. odoo-python
+#: code:addons/account_ios_hr/models/account_ios.py:0
+msgid "According to our books, on that date you owe us %s."
+msgstr "Prema našim knjigama na taj dan Vi dugujete nama %s."
+
+#. module: account_ios_hr
+#. odoo-python
+#: code:addons/account_ios_hr/models/account_ios.py:0
+msgid "According to our books, the balance on that date is zero."
+msgstr "Prema našim knjigama saldo na taj dan je nula."
+
+#. module: account_ios_hr
+#: model_terms:ir.ui.view,arch_db:account_ios_hr.report_account_ios_table
+msgid "Account:"
+msgstr "Konto:"
+
+#. module: account_ios_hr
+#: model:ir.model.fields,field_description:account_ios_hr.field_account_ios__message_needaction
+msgid "Action Needed"
+msgstr "Potrebna radnja"
+
+#. module: account_ios_hr
+#: model:ir.model.fields,field_description:account_ios_hr.field_account_ios__activity_ids
+msgid "Activities"
+msgstr "Aktivnosti"
+
+#. module: account_ios_hr
+#: model:ir.model.fields,field_description:account_ios_hr.field_account_ios__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "Dekoracija iznimke aktivnosti"
+
+#. module: account_ios_hr
+#: model:ir.model.fields,field_description:account_ios_hr.field_account_ios__activity_state
+msgid "Activity State"
+msgstr "Status aktivnosti"
+
+#. module: account_ios_hr
+#: model:ir.model.fields,field_description:account_ios_hr.field_account_ios__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "Ikona vrste aktivnosti"
+
+#. module: account_ios_hr
+#: model:ir.model.fields,field_description:account_ios_hr.field_account_ios__date
+#: model:ir.model.fields,field_description:account_ios_hr.field_account_ios_prepare__date
+msgid "As of"
+msgstr "Na dan"
+
+#. module: account_ios_hr
+#: model:ir.model.fields,field_description:account_ios_hr.field_account_ios__message_attachment_count
+msgid "Attachment Count"
+msgstr "Broj priloga"
+
+#. module: account_ios_hr
+#: model:ir.model.fields,field_description:account_ios_hr.field_account_ios__balance
+#: model_terms:ir.ui.view,arch_db:account_ios_hr.report_account_ios_document
+#: model_terms:ir.ui.view,arch_db:account_ios_hr.view_account_ios_list
+msgid "Balance"
+msgstr "Saldo"
+
+#. module: account_ios_hr
+#: model_terms:ir.ui.view,arch_db:account_ios_hr.view_account_ios_prepare
+msgid "Cancel"
+msgstr "Odustani"
+
+#. module: account_ios_hr
+#: model:ir.model,name:account_ios_hr.model_res_company
+msgid "Companies"
+msgstr "Tvrtke"
+
+#. module: account_ios_hr
+#: model:ir.model.fields,field_description:account_ios_hr.field_account_ios__company_id
+#: model:ir.model.fields,field_description:account_ios_hr.field_account_ios_line__company_id
+#: model:ir.model.fields,field_description:account_ios_hr.field_account_ios_prepare__company_id
+msgid "Company"
+msgstr "Tvrtka"
+
+#. module: account_ios_hr
+#: model:ir.model,name:account_ios_hr.model_res_config_settings
+msgid "Config Settings"
+msgstr "Postavke"
+
+#. module: account_ios_hr
+#: model:ir.model.fields.selection,name:account_ios_hr.selection__account_ios__state__confirmed
+#: model_terms:ir.ui.view,arch_db:account_ios_hr.view_account_ios_search
+msgid "Confirmed"
+msgstr "Potvrđeno"
+
+#. module: account_ios_hr
+#: model:ir.model,name:account_ios_hr.model_res_partner
+msgid "Contact"
+msgstr "Kontakt"
+
+#. module: account_ios_hr
+#: model:ir.model.fields,field_description:account_ios_hr.field_account_ios__create_uid
+#: model:ir.model.fields,field_description:account_ios_hr.field_account_ios_line__create_uid
+#: model:ir.model.fields,field_description:account_ios_hr.field_account_ios_prepare__create_uid
+msgid "Created by"
+msgstr "Kreirao"
+
+#. module: account_ios_hr
+#: model:ir.model.fields,field_description:account_ios_hr.field_account_ios__create_date
+#: model:ir.model.fields,field_description:account_ios_hr.field_account_ios_line__create_date
+#: model:ir.model.fields,field_description:account_ios_hr.field_account_ios_prepare__create_date
+msgid "Created on"
+msgstr "Kreirano"
+
+#. module: account_ios_hr
+#: model:ir.model.fields,field_description:account_ios_hr.field_account_ios__currency_id
+#: model:ir.model.fields,field_description:account_ios_hr.field_account_ios_line__currency_id
+msgid "Currency"
+msgstr "Valuta"
+
+#. module: account_ios_hr
+#. odoo-python
+#: code:addons/account_ios_hr/models/account_ios.py:0
+msgid ""
+"Date, partner and company can only be changed while the statement is a "
+"draft."
+msgstr "Datum, partner i tvrtka mijenjaju se samo dok je izvod u nacrtu."
+
+#. module: account_ios_hr
+#: model_terms:ir.ui.view,arch_db:account_ios_hr.res_config_settings_view_form_ios
+msgid ""
+"Days the partner has to return a confirmed statement. Can be changed on each"
+" statement before printing."
+msgstr ""
+"Broj dana u kojem partner treba vratiti potvrđen izvod. Može se promijeniti "
+"na svakom izvodu prije ispisa."
+
+#. module: account_ios_hr
+#: model:ir.model.fields,help:account_ios_hr.field_res_company__ios_reply_days
+#: model:ir.model.fields,help:account_ios_hr.field_res_config_settings__ios_reply_days
+msgid ""
+"Default number of days the partner has to return a confirmed statement of "
+"open items."
+msgstr ""
+"Zadani broj dana u kojem partner treba vratiti potvrđen izvod otvorenih "
+"stavki."
+
+#. module: account_ios_hr
+#: model_terms:ir.ui.view,arch_db:account_ios_hr.view_account_ios_form
+msgid "Difference stated by the partner"
+msgstr "Razlika koju je partner naveo"
+
+#. module: account_ios_hr
+#: model_terms:ir.ui.view,arch_db:account_ios_hr.report_account_ios_tail
+msgid "Difference, if any"
+msgstr "Razlika, ako postoji"
+
+#. module: account_ios_hr
+#: model:ir.model.fields,field_description:account_ios_hr.field_account_ios__display_name
+#: model:ir.model.fields,field_description:account_ios_hr.field_account_ios_line__display_name
+#: model:ir.model.fields,field_description:account_ios_hr.field_account_ios_prepare__display_name
+msgid "Display Name"
+msgstr "Naziv"
+
+#. module: account_ios_hr
+#: model:ir.model.fields.selection,name:account_ios_hr.selection__account_ios__state__disputed
+#: model_terms:ir.ui.view,arch_db:account_ios_hr.view_account_ios_search
+msgid "Disputed"
+msgstr "Osporeno"
+
+#. module: account_ios_hr
+#: model:ir.model.fields,field_description:account_ios_hr.field_account_ios_line__move_id
+#: model_terms:ir.ui.view,arch_db:account_ios_hr.report_account_ios_table
+msgid "Document"
+msgstr "Dokument"
+
+#. module: account_ios_hr
+#: model:ir.model.fields,field_description:account_ios_hr.field_account_ios_line__amount_original
+msgid "Document Amount"
+msgstr "Iznos dokumenta"
+
+#. module: account_ios_hr
+#: model:ir.model.fields,field_description:account_ios_hr.field_account_ios_line__invoice_date
+msgid "Document Date"
+msgstr "Datum računa"
+
+#. module: account_ios_hr
+#: model_terms:ir.ui.view,arch_db:account_ios_hr.report_account_ios_table
+msgid "Document date"
+msgstr "Datum dokumenta"
+
+#. module: account_ios_hr
+#: model:ir.model.fields.selection,name:account_ios_hr.selection__account_ios__state__draft
+#: model_terms:ir.ui.view,arch_db:account_ios_hr.view_account_ios_search
+msgid "Draft"
+msgstr "Nacrt"
+
+#. module: account_ios_hr
+#: model:ir.model.fields,field_description:account_ios_hr.field_account_ios_line__date_maturity
+msgid "Due Date"
+msgstr "Dospijeće"
+
+#. module: account_ios_hr
+#: model_terms:ir.ui.view,arch_db:account_ios_hr.report_account_ios_table
+msgid "Due date"
+msgstr "Dospijeće"
+
+#. module: account_ios_hr
+#: model:ir.model.fields,field_description:account_ios_hr.field_account_ios__message_follower_ids
+msgid "Followers"
+msgstr "Pratitelji"
+
+#. module: account_ios_hr
+#: model:ir.model.fields,field_description:account_ios_hr.field_account_ios__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Pratitelji (partneri)"
+
+#. module: account_ios_hr
+#: model:ir.model.fields,help:account_ios_hr.field_account_ios__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "Font awesome ikona, npr. fa-tasks"
+
+#. module: account_ios_hr
+#: model_terms:ir.ui.view,arch_db:account_ios_hr.view_account_ios_prepare
+msgid ""
+"For the year end, enter 31 December. An empty partner list means\n"
+"                    every partner with an open item on that date. An existing draft for\n"
+"                    the same partner and date is refreshed, not duplicated."
+msgstr ""
+"Za kraj godine upišite 31.12. Prazan popis partnera znači sve koji na taj "
+"dan imaju otvorenu stavku. Nacrt za istog partnera i isti dan se osvježi, ne"
+" duplicira."
+
+#. module: account_ios_hr
+#: model_terms:ir.ui.view,arch_db:account_ios_hr.report_account_ios_document
+msgid "Form"
+msgstr "Obrazac"
+
+#. module: account_ios_hr
+#: model_terms:ir.ui.view,arch_db:account_ios_hr.view_account_ios_search
+msgid "Group By"
+msgstr "Grupiraj"
+
+#. module: account_ios_hr
+#: model:ir.model.fields,field_description:account_ios_hr.field_account_ios__has_message
+msgid "Has Message"
+msgstr "Ima poruku"
+
+#. module: account_ios_hr
+#: model_terms:ir.ui.view,arch_db:account_ios_hr.report_account_ios_document
+msgid "IBAN:"
+msgstr "IBAN:"
+
+#. module: account_ios_hr
+#: model:ir.model.fields,field_description:account_ios_hr.field_account_ios__id
+#: model:ir.model.fields,field_description:account_ios_hr.field_account_ios_line__id
+#: model:ir.model.fields,field_description:account_ios_hr.field_account_ios_prepare__id
+msgid "ID"
+msgstr "ID"
+
+#. module: account_ios_hr
+#: model:ir.model.fields,field_description:account_ios_hr.field_fsm_location__ios_count
+#: model:ir.model.fields,field_description:account_ios_hr.field_fsm_person__ios_count
+#: model:ir.model.fields,field_description:account_ios_hr.field_res_partner__ios_count
+#: model:ir.model.fields,field_description:account_ios_hr.field_res_users__ios_count
+#: model_terms:ir.ui.view,arch_db:account_ios_hr.report_account_ios_document
+#: model_terms:ir.ui.view,arch_db:account_ios_hr.view_partner_form_ios
+msgid "IOS"
+msgstr "IOS"
+
+#. module: account_ios_hr
+#: model:ir.model.fields,field_description:account_ios_hr.field_res_company__ios_reply_days
+#: model:ir.model.fields,field_description:account_ios_hr.field_res_config_settings__ios_reply_days
+msgid "IOS Reply Within (Days)"
+msgstr "IOS rok za odgovor (dana)"
+
+#. module: account_ios_hr
+#: model:ir.model.fields,field_description:account_ios_hr.field_account_ios__activity_exception_icon
+msgid "Icon"
+msgstr "Ikona"
+
+#. module: account_ios_hr
+#: model:ir.model.fields,help:account_ios_hr.field_account_ios__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "Ikona koja označava iznimku aktivnosti."
+
+#. module: account_ios_hr
+#: model:ir.model.fields,help:account_ios_hr.field_account_ios__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "Ako je označeno, nove poruke traže Vašu pažnju."
+
+#. module: account_ios_hr
+#: model:ir.model.fields,help:account_ios_hr.field_account_ios__message_has_error
+#: model:ir.model.fields,help:account_ios_hr.field_account_ios__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Ako je označeno, neke poruke imaju grešku isporuke."
+
+#. module: account_ios_hr
+#: model_terms:ir.ui.view,arch_db:account_ios_hr.report_account_ios_tail
+msgid ""
+"If we receive no reply, we will consider the balance agreed.\n"
+"                If you disagree, state the difference and sign."
+msgstr ""
+"Ako odgovor ne stigne, smatramo da je stanje usklađeno. Ako se ne slažete, "
+"upišite razliku uz potpis."
+
+#. module: account_ios_hr
+#: model:ir.model.fields,field_description:account_ios_hr.field_account_ios__message_is_follower
+msgid "Is Follower"
+msgstr "Je pratitelj"
+
+#. module: account_ios_hr
+#: model:ir.model.fields,field_description:account_ios_hr.field_account_ios_line__move_line_id
+msgid "Journal Item"
+msgstr "Stavka knjiženja"
+
+#. module: account_ios_hr
+#: model:ir.model.fields,field_description:account_ios_hr.field_account_ios__write_uid
+#: model:ir.model.fields,field_description:account_ios_hr.field_account_ios_line__write_uid
+#: model:ir.model.fields,field_description:account_ios_hr.field_account_ios_prepare__write_uid
+msgid "Last Updated by"
+msgstr "Zadnji ažurirao"
+
+#. module: account_ios_hr
+#: model:ir.model.fields,field_description:account_ios_hr.field_account_ios__write_date
+#: model:ir.model.fields,field_description:account_ios_hr.field_account_ios_line__write_date
+#: model:ir.model.fields,field_description:account_ios_hr.field_account_ios_prepare__write_date
+msgid "Last Updated on"
+msgstr "Zadnje ažurirano"
+
+#. module: account_ios_hr
+#: model:ir.model.fields,help:account_ios_hr.field_account_ios_prepare__partner_ids
+msgid ""
+"Leave empty to prepare a statement for every partner with an open item on "
+"that date."
+msgstr ""
+"Ako je prazno, izvod se radi za svakog partnera koji na taj dan ima otvorenu"
+" stavku."
+
+#. module: account_ios_hr
+#: model:ir.model.fields,field_description:account_ios_hr.field_account_ios__line_ids
+#: model_terms:ir.ui.view,arch_db:account_ios_hr.view_account_ios_form
+msgid "Lines"
+msgstr "Stavke"
+
+#. module: account_ios_hr
+#: model_terms:ir.ui.view,arch_db:account_ios_hr.view_account_ios_form
+msgid "Mark as Sent"
+msgstr "Označi poslano"
+
+#. module: account_ios_hr
+#: model:ir.model.fields,field_description:account_ios_hr.field_account_ios__message_has_error
+msgid "Message Delivery error"
+msgstr "Greška isporuke poruke"
+
+#. module: account_ios_hr
+#: model:ir.model.fields,field_description:account_ios_hr.field_account_ios__message_ids
+msgid "Messages"
+msgstr "Poruke"
+
+#. module: account_ios_hr
+#: model:ir.model.fields,field_description:account_ios_hr.field_account_ios__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "Rok moje aktivnosti"
+
+#. module: account_ios_hr
+#. odoo-python
+#: code:addons/account_ios_hr/models/account_ios.py:0
+msgid "New"
+msgstr "Novi"
+
+#. module: account_ios_hr
+#: model:ir.model.fields,field_description:account_ios_hr.field_account_ios__activity_calendar_event_id
+msgid "Next Activity Calendar Event"
+msgstr "Događaj sljedeće aktivnosti"
+
+#. module: account_ios_hr
+#: model:ir.model.fields,field_description:account_ios_hr.field_account_ios__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "Rok sljedeće aktivnosti"
+
+#. module: account_ios_hr
+#: model:ir.model.fields,field_description:account_ios_hr.field_account_ios__activity_summary
+msgid "Next Activity Summary"
+msgstr "Sažetak sljedeće aktivnosti"
+
+#. module: account_ios_hr
+#: model:ir.model.fields,field_description:account_ios_hr.field_account_ios__activity_type_id
+msgid "Next Activity Type"
+msgstr "Vrsta sljedeće aktivnosti"
+
+#. module: account_ios_hr
+#: model_terms:ir.ui.view,arch_db:account_ios_hr.report_account_ios_document
+#: model_terms:ir.ui.view,arch_db:account_ios_hr.report_account_ios_table
+msgid "No."
+msgstr "Broj"
+
+#. module: account_ios_hr
+#: model:ir.model.fields,field_description:account_ios_hr.field_account_ios__name
+#: model:ir.model.fields,field_description:account_ios_hr.field_account_ios_line__move_name
+msgid "Number"
+msgstr "Broj"
+
+#. module: account_ios_hr
+#: model:ir.model.fields,field_description:account_ios_hr.field_account_ios__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Broj radnji"
+
+#. module: account_ios_hr
+#: model:ir.model.fields,help:account_ios_hr.field_account_ios__reply_days
+msgid ""
+"Number of days the partner has to return the confirmed statement. Printed on"
+" the letter. The default comes from the accounting settings."
+msgstr ""
+"Broj dana u kojem partner treba vratiti potvrđen izvod. Ispisuje se na "
+"dopisu. Zadana vrijednost dolazi iz postavki računovodstva."
+
+#. module: account_ios_hr
+#: model:ir.model.fields,field_description:account_ios_hr.field_account_ios__message_has_error_counter
+msgid "Number of errors"
+msgstr "Broj grešaka"
+
+#. module: account_ios_hr
+#: model:ir.model.fields,help:account_ios_hr.field_account_ios__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr "Broj poruka koje traže radnju"
+
+#. module: account_ios_hr
+#: model:ir.model.fields,help:account_ios_hr.field_account_ios__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Broj poruka s greškom isporuke"
+
+#. module: account_ios_hr
+#: model:ir.model.fields,field_description:account_ios_hr.field_account_ios_line__amount_open
+msgid "Open Amount"
+msgstr "Otvoreno"
+
+#. module: account_ios_hr
+#: model_terms:ir.ui.view,arch_db:account_ios_hr.report_account_ios_table
+msgid "Open amount"
+msgstr "Otvoreni iznos"
+
+#. module: account_ios_hr
+#. odoo-python
+#: code:addons/account_ios_hr/models/account_ios.py:0
+msgid "Open items can only be refreshed on a draft statement."
+msgstr "Otvorene stavke osvježavaju se samo na nacrtu."
+
+#. module: account_ios_hr
+#: model_terms:ir.ui.view,arch_db:account_ios_hr.report_account_ios_document
+msgid "Our payables"
+msgstr "Naše obveze"
+
+#. module: account_ios_hr
+#: model_terms:ir.ui.view,arch_db:account_ios_hr.report_account_ios_document
+msgid "Our receivables"
+msgstr "Naša potraživanja"
+
+#. module: account_ios_hr
+#: model:ir.model.fields,field_description:account_ios_hr.field_account_ios__partner_id
+#: model_terms:ir.ui.view,arch_db:account_ios_hr.view_account_ios_search
+msgid "Partner"
+msgstr "Partner"
+
+#. module: account_ios_hr
+#: model_terms:ir.ui.view,arch_db:account_ios_hr.view_account_ios_form
+msgid "Partner Agrees"
+msgstr "Slaže se"
+
+#. module: account_ios_hr
+#: model_terms:ir.ui.view,arch_db:account_ios_hr.view_account_ios_form
+msgid "Partner Disagrees"
+msgstr "Ne slaže se"
+
+#. module: account_ios_hr
+#: model_terms:ir.ui.view,arch_db:account_ios_hr.view_account_ios_form
+msgid "Partner Reply"
+msgstr "Odgovor partnera"
+
+#. module: account_ios_hr
+#: model:ir.model.fields,field_description:account_ios_hr.field_account_ios_prepare__partner_ids
+msgid "Partners"
+msgstr "Partneri"
+
+#. module: account_ios_hr
+#: model:ir.model.fields.selection,name:account_ios_hr.selection__account_ios_line__side__payable
+msgid "Payable"
+msgstr "Obveza"
+
+#. module: account_ios_hr
+#: model:ir.model.fields,field_description:account_ios_hr.field_account_ios__amount_payable
+#: model_terms:ir.ui.view,arch_db:account_ios_hr.view_account_ios_list
+msgid "Payables"
+msgstr "Obveze"
+
+#. module: account_ios_hr
+#: model_terms:ir.ui.view,arch_db:account_ios_hr.report_account_ios_tail
+msgid "Place and date"
+msgstr "Mjesto i datum"
+
+#. module: account_ios_hr
+#: model_terms:ir.ui.view,arch_db:account_ios_hr.report_account_ios_document
+msgid "Please find below the open items as of"
+msgstr "U prilogu Vam šaljemo otvorene stavke na dan"
+
+#. module: account_ios_hr
+#. odoo-python
+#: code:addons/account_ios_hr/models/account_ios.py:0
+msgid "Please return the confirmed statement within %(days)s days."
+msgstr "Molimo da nam potvrđen obrazac IOS vratite u roku od %(days)s dana."
+
+#. module: account_ios_hr
+#: model:ir.model.fields,help:account_ios_hr.field_account_ios__balance
+msgid "Positive: the partner owes us. Negative: we owe the partner."
+msgstr "Pozitivno: partner duguje nama. Negativno: mi dugujemo partneru."
+
+#. module: account_ios_hr
+#: model_terms:ir.ui.view,arch_db:account_ios_hr.view_account_ios_prepare
+msgid "Prepare"
+msgstr "Pripremi"
+
+#. module: account_ios_hr
+#: model:ir.actions.act_window,name:account_ios_hr.action_account_ios_prepare
+#: model_terms:ir.ui.view,arch_db:account_ios_hr.view_account_ios_list
+msgid "Prepare Statements"
+msgstr "Pripremi izvod"
+
+#. module: account_ios_hr
+#: model:ir.model,name:account_ios_hr.model_account_ios_prepare
+msgid "Prepare Statements of Open Items"
+msgstr "Priprema izvoda otvorenih stavki"
+
+#. module: account_ios_hr
+#: model_terms:ir.actions.act_window,help:account_ios_hr.action_account_ios
+msgid "Prepare a statement of open items"
+msgstr "Pripremite izvod otvorenih stavki"
+
+#. module: account_ios_hr
+#: model:ir.model.fields,field_description:account_ios_hr.field_account_ios__rating_ids
+msgid "Ratings"
+msgstr "Ocjene"
+
+#. module: account_ios_hr
+#: model:ir.model.fields.selection,name:account_ios_hr.selection__account_ios_line__side__receivable
+msgid "Receivable"
+msgstr "Potraživanje"
+
+#. module: account_ios_hr
+#: model:ir.model.fields,field_description:account_ios_hr.field_account_ios__amount_receivable
+#: model_terms:ir.ui.view,arch_db:account_ios_hr.view_account_ios_list
+msgid "Receivables"
+msgstr "Potraživanja"
+
+#. module: account_ios_hr
+#: model:ir.model.fields,field_description:account_ios_hr.field_account_ios_line__ref
+msgid "Reference"
+msgstr "Referenca"
+
+#. module: account_ios_hr
+#: model_terms:ir.ui.view,arch_db:account_ios_hr.view_account_ios_form
+msgid "Refresh Lines"
+msgstr "Osvježi stavke"
+
+#. module: account_ios_hr
+#: model:ir.model.fields,field_description:account_ios_hr.field_account_ios__reply_date
+msgid "Reply Date"
+msgstr "Datum odgovora"
+
+#. module: account_ios_hr
+#: model:ir.model.fields,field_description:account_ios_hr.field_account_ios__reply_note
+msgid "Reply Note"
+msgstr "Napomena uz odgovor"
+
+#. module: account_ios_hr
+#: model:ir.model.fields,field_description:account_ios_hr.field_account_ios__reply_days
+msgid "Reply Within (Days)"
+msgstr "Rok za odgovor (dana)"
+
+#. module: account_ios_hr
+#: model_terms:ir.ui.view,arch_db:account_ios_hr.res_config_settings_view_form_ios
+msgid "Reply deadline"
+msgstr "Rok za odgovor"
+
+#. module: account_ios_hr
+#: model_terms:ir.ui.view,arch_db:account_ios_hr.view_account_ios_form
+msgid "Reset to Draft"
+msgstr "Vrati u nacrt"
+
+#. module: account_ios_hr
+#: model:ir.model.fields,field_description:account_ios_hr.field_account_ios__activity_user_id
+msgid "Responsible User"
+msgstr "Odgovorni korisnik"
+
+#. module: account_ios_hr
+#: model:ir.model.fields,field_description:account_ios_hr.field_account_ios__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "Greška isporuke SMS-a"
+
+#. module: account_ios_hr
+#: model_terms:ir.ui.view,arch_db:account_ios_hr.report_account_ios_tail
+msgid "Sender"
+msgstr "Pošiljatelj"
+
+#. module: account_ios_hr
+#: model:ir.model.fields.selection,name:account_ios_hr.selection__account_ios__state__sent
+#: model_terms:ir.ui.view,arch_db:account_ios_hr.view_account_ios_search
+msgid "Sent"
+msgstr "Poslano"
+
+#. module: account_ios_hr
+#: model:ir.model.fields,field_description:account_ios_hr.field_account_ios_line__side
+msgid "Side"
+msgstr "Strana"
+
+#. module: account_ios_hr
+#: model:ir.model.fields,field_description:account_ios_hr.field_account_ios_line__ios_id
+msgid "Statement"
+msgstr "Izvod"
+
+#. module: account_ios_hr
+#: model:ir.actions.report,name:account_ios_hr.action_report_account_ios
+#: model:ir.model,name:account_ios_hr.model_account_ios
+#: model_terms:ir.ui.view,arch_db:account_ios_hr.report_account_ios_document
+msgid "Statement of Open Items"
+msgstr "Izvod otvorenih stavki"
+
+#. module: account_ios_hr
+#: model:ir.model,name:account_ios_hr.model_account_ios_line
+msgid "Statement of Open Items Line"
+msgstr "Stavka izvoda otvorenih stavki"
+
+#. module: account_ios_hr
+#. odoo-python
+#: code:addons/account_ios_hr/models/res_partner.py:0
+#: code:addons/account_ios_hr/wizard/ios_prepare.py:0
+#: model:ir.actions.act_window,name:account_ios_hr.action_account_ios
+#: model:ir.ui.menu,name:account_ios_hr.menu_account_ios
+#: model_terms:ir.ui.view,arch_db:account_ios_hr.res_config_settings_view_form_ios
+msgid "Statements of Open Items"
+msgstr "Izvodi otvorenih stavki"
+
+#. module: account_ios_hr
+#: model:ir.model.fields,field_description:account_ios_hr.field_account_ios__state
+#: model_terms:ir.ui.view,arch_db:account_ios_hr.view_account_ios_search
+msgid "Status"
+msgstr "Status"
+
+#. module: account_ios_hr
+#: model:ir.model.fields,help:account_ios_hr.field_account_ios__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"Status prema aktivnostima\n"
+"Kasni: rok je već prošao\n"
+"Danas: aktivnost je danas\n"
+"Planirano: buduće aktivnosti."
+
+#. module: account_ios_hr
+#. odoo-python
+#: code:addons/account_ios_hr/models/account_ios.py:0
+msgid "The reply deadline must be at least one day."
+msgstr "Rok za odgovor mora biti barem jedan dan."
+
+#. module: account_ios_hr
+#: model_terms:ir.ui.view,arch_db:account_ios_hr.report_account_ios_document
+msgid "There are no open items on this date."
+msgstr "Na ovaj dan nema otvorenih stavki."
+
+#. module: account_ios_hr
+#: model_terms:ir.ui.view,arch_db:account_ios_hr.report_account_ios_table
+msgid "Total"
+msgstr "Ukupno"
+
+#. module: account_ios_hr
+#: model:ir.model.fields,help:account_ios_hr.field_account_ios__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "Vrsta iznimke aktivnosti na zapisu."
+
+#. module: account_ios_hr
+#: model_terms:ir.actions.act_window,help:account_ios_hr.action_account_ios
+msgid ""
+"Use Prepare Statements to create one draft per partner with open\n"
+"                receivables or payables on a date, for example 31 December."
+msgstr ""
+"Gumbom Pripremi izvod napravite nacrt za svakog partnera s otvorenim "
+"potraživanjima ili obvezama na dan, npr. 31.12."
+
+#. module: account_ios_hr
+#. odoo-python
+#: code:addons/account_ios_hr/models/account_ios.py:0
+msgid "VAT"
+msgstr "PDV ID"
+
+#. module: account_ios_hr
+#: model_terms:ir.ui.view,arch_db:account_ios_hr.report_account_ios_tail
+msgid "We confirm the balance"
+msgstr "Potvrđujemo suglasnost"
+
+#. module: account_ios_hr
+#: model:ir.model.fields,field_description:account_ios_hr.field_account_ios__website_message_ids
+msgid "Website Messages"
+msgstr "Poruke s weba"
+
+#. module: account_ios_hr
+#: model:ir.model.fields,help:account_ios_hr.field_account_ios__website_message_ids
+msgid "Website communication history"
+msgstr "Povijest komunikacije s weba"
+
+#. module: account_ios_hr
+#: model_terms:ir.ui.view,arch_db:account_ios_hr.res_config_settings_view_form_ios
+msgid "days"
+msgstr "dana"

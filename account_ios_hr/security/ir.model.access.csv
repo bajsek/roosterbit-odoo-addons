@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_account_ios_invoice,account.ios.invoice,model_account_ios,account.group_account_invoice,1,1,1,1
+access_account_ios_line_invoice,account.ios.line.invoice,model_account_ios_line,account.group_account_invoice,1,1,1,1
+access_account_ios_prepare_invoice,account.ios.prepare.invoice,model_account_ios_prepare,account.group_account_invoice,1,1,1,1
